@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Course Home Page for Web Development">
+    <meta name="author" content="Your Name">
+    <title>Course Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    <p>I am the main man</p>
+    <header>
+        <img src="images/me.jpg" alt="Lewis Profile photo">
+        <h1>Lewis Ochieng' Ombaka</h1>
+    </header>
+    <nav id="navMenu">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="https://github.com/lewisombaka/">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/lewis-ombaka-5032991b9/">LinkedIn</a></li>
+        </ul>
+        <button id="menuToggle">☰</button>
+    </nav>
+    <main>
+        <section class="sectionOne">
+            <div class="courseWork">
+                <h2>Course Work</h2>
+                <ul class="courseList">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="country">
+                <h2>Nairobi, Kenya</h2>
+                <figure>
+                    <img src="images/kenyan-wildlife.jpg" alt="Baobab Trees" width="90%" height="auto">
+                    <figcaption>Baobab Trees</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="sectionTwo">
+            <h2>Web and Computer Programming Certificate</h2>
+            <section class="buttons">
+                <button onclick="filterCourses('all')">All Courses</button>
+                <button onclick="filterCourses('WDD')">WDD Courses</button>
+                <button onclick="filterCourses('CSE')">CSE Courses</button>
+            </section>
+            <div id="courseContainer"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 💻 Lewis Ochieng' Ombaka 💻 Kenya <img src="images/Flag_of_Kenya.svg.png" alt="Kenyan Flag" width="30"></p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
