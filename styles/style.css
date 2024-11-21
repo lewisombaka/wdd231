@@ -7,8 +7,6 @@
 
 html, body {
     width: 100%;
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -29,8 +27,6 @@ header {
     align-items: center;
     gap: 20px;
     padding: 1em;
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 header img {
@@ -56,22 +52,13 @@ nav ul {
     justify-content: space-around;
 }
 
-nav ul li {
-    margin: 0;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5em;
 }
 
-nav ul li a:hover {
-    background-color: #777;
-    border-radius: 4px;
-}
-
-nav ul li a.active {
+nav ul li a:hover, nav ul li a.active {
     background-color: #777;
     border-radius: 4px;
     color: yellow;
@@ -91,6 +78,20 @@ nav ul li a.active {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+.courseWork,
+.country {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    border-radius: 15px;
+    width: 48%;
+}
+
+.courseList {
+    padding: 12px;
+    list-style-type: disc;
 }
 
 .sectionTwo {
@@ -114,20 +115,25 @@ button {
     padding: 6px;
 }
 
-.courseWork,
-.country {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    border-radius: 15px;
-    width: 48%;
+/* Course Container for Responsive Grid */
+#courseContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 10px;
+    margin-top: 1em;
 }
 
-.courseList {
-    padding: 12px;
+/* Course Item Styling */
+#courseContainer div {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 2px solid red;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
-/* Responsive Styles */
+/* Responsive Grid for Smaller Screens */
 @media (max-width: 600px) {
     nav ul {
         display: none;
@@ -143,9 +149,7 @@ button {
     }
 
     .sectionOne {
-        display: flex;
         flex-direction: column;
-        gap: 20px;
     }
 
     .courseWork,
@@ -154,7 +158,7 @@ button {
     }
 
     #courseContainer {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column */
     }
 }
 
@@ -164,6 +168,4 @@ footer {
     color: white;
     text-align: center;
     padding: 1em;
-    max-width: 100%;
-    margin: 0 auto;
 }
