@@ -77,3 +77,24 @@ span {
 nav a.active {
     color: yellowgreen;
 }
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:768px){
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        margin-left: 10px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.active{
+        display: flex;
+    }
+}

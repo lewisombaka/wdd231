@@ -9,3 +9,11 @@ img.width = 30;
 newParagraph.textContent = "©2025 💻 Lewis Ochieng' Ombaka 💻 Kenya ";
 newParagraph.append(img);
 footer1.append(newParagraph)
+
+
+// hamburger menu
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinks = document.getElementById('nav-links');
+hamburgerBtn.addEventListener('click', ()=>{
+    navLinks.classList.toggle('active');
+});
