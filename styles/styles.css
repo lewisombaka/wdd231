@@ -1,0 +1,66 @@
+:root {
+    --background: rgb(95, 91, 217);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+header, footer, h3 {
+    background-color: var(--background);
+}
+
+nav {
+    background-color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+main {
+    padding: 2rem;
+}
+
+.main {
+    display: grid;
+    gap: 2rem;
+}
+
+.coursework {
+    grid-column-start: 1;
+    background-color: aliceblue;
+    border: 1px solid wheat;
+}
+
+.country {
+    grid-column-start: 2;
+    background-color: aliceblue;
+    border: 1px solid wheat;
+}
+
+.coursesBox{ 
+    margin-top: 2rem;
+}
+
+header img {
+    width: 5rem;
+    grid-column-start: 1;
+}
+
+h1 {
+    grid-column-start: 2;
+}
+
+span {
+    display: grid;
+}
