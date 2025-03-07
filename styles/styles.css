@@ -1,5 +1,7 @@
 :root {
     --background: rgb(95, 91, 217);
+    --heading-font: 'Roboto';
+    --paragrapgh-font: 'Comic Neue';
 }
 
 * {
@@ -11,15 +13,22 @@
 body{
     max-width: 720px;
     margin: 0 auto;
-    font-family: sans-serif;
 }
 
 header, footer, h3 {
     background-color: var(--background);
 }
 
+header, h2, h3{
+    font-family: var(--heading-font);
+}
+
 nav {
     background-color: black;
+}
+
+p {
+    font-family: var(--paragrapgh-font);
 }
 
 nav a{
@@ -63,4 +72,8 @@ h1 {
 
 span {
     display: grid;
+}
+
+nav a.active {
+    color: yellowgreen;
 }
