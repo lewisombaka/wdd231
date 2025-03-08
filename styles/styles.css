@@ -98,3 +98,8 @@ nav a.active {
         display: flex;
     }
 }
+
+button {
+    width: 5rem;
+    background-color: aliceblue;
+}

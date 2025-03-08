@@ -10,15 +10,17 @@
     <script src="scripts/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <span>
-            <img src="images/me2.jpg" alt="profile">
+        <div>
+            <span>
+                <img src="images/me2.jpg" alt="profile">
+            </span>
             <h1>Lewis Ochieng' Ombaka | Homepage</h1>
-        </span>
-        <button class="hamburger" id="hamburger-btn">☰</button>
+        </div>
+        <button class="hamburger" id="hamburger-btn">&#9776;</button>
         <nav id="nav-links" class="nav-links">
             <a href="#" class="active">Home</a>
             <a href="#">Chamber</a>
@@ -48,17 +50,17 @@
         <div class="coursesBox">
             <h3>Web and Computer Programming Certificate</h3>
             <div class="button titles">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button onclick="filterButtons('all')">All</button>
+                <button onclick="filterButtons('CSE')">CSE</button>
+                <button onclick="filterButtons('WDD')">WDD</button>
             </div>
             <div class="button courses">
-                <button>CSE 110</button>
-                <button>WDD 130</button>
-                <button>CSE 111</button>
-                <button>CSE 210</button>
-                <button>WDD 131</button>
-                <button>WDD 231</button>
+                <button class="btn" data-category="CSE">CSE 110</button>
+                <button class="btn" data-category="WDD">WDD 130</button>
+                <button class="btn" data-category="CSE">CSE 111</button>
+                <button class="btn" data-category="CSE">CSE 210</button>
+                <button class="btn" data-category="WDD">WDD 131</button>
+                <button class="btn" data-category="WDD">WDD 231</button>
             </div>
         </div>
     </main>
