@@ -68,7 +68,7 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: var(--heading-font);
-    color: var (--header-footer-bg);
+    color: var(--header-footer-bg);
 }
 
 h3 {

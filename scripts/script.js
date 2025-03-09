@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     newParagraph.append(img);
     footer1.append(newParagraph);
 
+    // Set the "Last modified" date
+    const lastModifiedElement = document.getElementById('lastModified');
+    lastModifiedElement.textContent = `Last modified: ${document.lastModified}`;
+
     // Hamburger menu
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navLinks = document.getElementById('nav-links');
@@ -26,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredCourses.forEach(course => {
             const courseBtn = document.createElement('button');
             courseBtn.textContent = `${course.subject} ${course.number}`;
+            courseBtn.classList.add('course-btn');
             courseBtn.onclick = () => toggleCourseDescription(course, courseBtn);
             coursesList.appendChild(courseBtn);
         });
@@ -122,10 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize with all courses
     filterCourses('all');
-
-    // Last modified date
-    document.addEventListener("DOMContentLoaded", function() {
-        const lastModified = document.lastModified;
-        document.getElementById("lastModified").textContent = `Last modified: ${lastModified}`;
-    });
 });
