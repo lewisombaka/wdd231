@@ -14,11 +14,6 @@
 </head>
 <body>
     <header>
-        <div>
-            <span>
-                <img src="images/me2.jpg" alt="profile">
-            </span>
-        </div>
         <button class="hamburger" id="hamburger-btn">&#9776;</button>
         <nav id="nav-links" class="nav-links">
             <a href="#" class="active">Home</a>
@@ -28,7 +23,10 @@
         </nav>
     </header>
     <main>
-        <h1>Lewis Ochieng' Ombaka | Homepage</h1>
+        <div class="title-container">
+            <h1>Lewis Ochieng' Ombaka | Homepage</h1>
+            <img src="images/me2.jpg" alt="profile">
+        </div>
         <h2>Home</h2>
         <section class="main">
             <section class="coursework">
@@ -50,18 +48,13 @@
         <section class="coursesBox">
             <h3>Web and Computer Programming Certificate</h3>
             <section class="button titles">
-                <button onclick="filterButtons('all')">All</button>
-                <button onclick="filterButtons('CSE')">CSE</button>
-                <button onclick="filterButtons('WDD')">WDD</button>
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
             </section>
-            <section class="button courses">
-                <button class="btn" data-category="CSE">CSE 110</button>
-                <button class="btn" data-category="WDD">WDD 130</button>
-                <button class="btn" data-category="CSE">CSE 111</button>
-                <button class="btn" data-category="CSE">CSE 210</button>
-                <button class="btn" data-category="WDD">WDD 131</button>
-                <button class="btn" data-category="WDD">WDD 231</button>
-            </section>
+            <section class="button courses" id="coursesList"></section>
+            <div id="courseDescription"></div>
+            <p class="totalCredits"></p>
         </section>
     </main>
     <footer>
