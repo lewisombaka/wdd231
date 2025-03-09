@@ -1,7 +1,11 @@
 :root {
     --background: rgb(95, 91, 217);
-    --heading-font: 'Roboto';
-    --paragrapgh-font: 'Comic Neue';
+    --header-footer-bg: #343a40;
+    --primary-color: #f8f9fa;
+    --secondary-color: #6c757d;
+    --link-hover-color: #adb5bd;
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Comic Neue', cursive;
 }
 
 * {
@@ -10,96 +14,142 @@
     box-sizing: border-box;
 }
 
-body{
-    max-width: 720px;
+body {
+    max-width: 1200px;
     margin: 0 auto;
+    font-family: var(--paragraph-font);
+    background-color: var(--primary-color);
+    color: #212529;
+    line-height: 1.6;
 }
 
-header, footer, h3 {
-    background-color: var(--background);
+header, footer {
+    background-color: var(--header-footer-bg);
+    color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
 }
 
-header, h2, h3{
-    font-family: var(--heading-font);
+header img {
+    width: 5rem;
+    border-radius: 50%;
 }
 
 nav {
-    background-color: black;
+    margin: 1rem 0;
 }
 
-p {
-    font-family: var(--paragrapgh-font);
-}
-
-nav a{
+nav a {
     text-decoration: none;
-    color: aliceblue;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--link-hover-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--header-footer-bg);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 main {
     padding: 2rem;
 }
 
-.main {
-    display: grid;
-    gap: 2rem;
+.section {
+    margin-bottom: 2rem;
 }
 
-.coursework {
-    grid-column-start: 1;
-    background-color: aliceblue;
-    border: 1px solid wheat;
+.coursework, .country {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
-.country {
-    grid-column-start: 2;
-    background-color: aliceblue;
-    border: 1px solid wheat;
+.coursework ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
 }
 
-.coursesBox{ 
+.country figure {
+    text-align: center;
+}
+
+.country img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.coursesBox {
     margin-top: 2rem;
 }
 
-header img {
-    width: 5rem;
-    grid-column-start: 1;
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
 }
 
-h1 {
-    grid-column-start: 2;
+.course-card.completed {
+    background-color: #d4edda;
 }
 
-span {
-    display: grid;
+button {
+    background-color: var(--header-footer-bg);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-nav a.active {
-    color: yellowgreen;
+button:hover {
+    background-color: var(--link-hover-color);
 }
 
 .hamburger {
     display: none;
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
     .hamburger {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 25px;
-        margin-left: 10px;
+        top: 1rem;
+        right: 1rem;
+        width: 30px;
+        cursor: pointer;
     }
     .nav-links {
         display: none;
+        flex-direction: column;
+        align-items: center;
     }
-    .nav-links.active{
+    .nav-links.active {
         display: flex;
     }
-}
-
-button {
-    width: 5rem;
-    background-color: aliceblue;
 }
