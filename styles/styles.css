@@ -152,4 +152,18 @@ button:hover {
     .nav-links.active {
         display: flex;
     }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .coursework, .country {
+        margin-bottom: 0;
+    }
+
+    .section {
+        margin-bottom: 1rem;
+    }
 }
