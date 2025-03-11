@@ -382,3 +382,17 @@ function sings ({vocals}){return `${vocals} Sings so Well`};
 console.log(sings(band));
 
 // Classes
+
+class pizza {
+    constructor (pizzaType){
+        this.type = pizzaType;
+        this.size = "Medium";
+        this.crust = "original";
+    }
+    bake(){
+        console.log(`Baking a ${this.size} ${this.crust} ${this.type} crust pizza`);
+    }
+};
+
+const myPizza = new pizza("pepperoni");
+myPizza.bake();
