@@ -279,3 +279,106 @@ console.log(clothesDept[1][0]);
 
 const sportsStore = [equipDept,clothesDept];
 console.log(sportsStore[0][0][1]);
+
+console.log("-- -- Using For Loop -- --");
+
+for (let i = 0; i < 2; i++){
+    for (let j = 0; j < 2; j++){
+        for (let k = 0; k < 3; k++){
+            console.log(sportsStore[i][j][k]);
+        }
+    }
+}
+
+console.log("-- -- Using For Loop -- --");
+
+sportsStore.forEach(row => console.log(row.join(" ")));
+
+// objects
+
+const myObj = {name:"Dave"};
+console.log(myObj.name);
+
+const anotherObj = {
+    alive:true,
+    answer:42,
+    hobbies:["Eat", "Sleep", "Code"],
+    beverage:{
+        morning:"Coffee",
+        night:"Iced Tea"
+    },
+    action: function(){
+        return `Time for ${this.beverage.morning}`;
+    }
+}
+
+console.log(anotherObj.beverage.morning); // acces items using .notation
+console.log(anotherObj["answer"]); // acces items using bracket
+console.log(anotherObj.action());
+
+const vehicle = {
+    wheels:4,
+    engine:function(){
+        return "Vroooom"
+    }
+}
+
+// Object Inheritance
+const truck = Object.create(vehicle);
+console.log(truck);
+truck.doors = 2;
+console.log(truck.engine()); // Inheritance
+
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function(){
+    return "Whooosh"
+};
+
+console.log(car.engine());
+
+const tesla = Object.create(car);
+console.log(car.wheels);
+console.log(tesla.engine());
+tesla.engine = function (){
+    return `Shhhhhh`;
+};
+console.log(tesla.engine());
+
+// Key Value Pairs in curly braces
+
+const band = {
+    vocals:"Robert Plant",
+    guitar:"Jimmy Page",
+    bass:"John Paul Jones",
+    drums:"John Bonham"
+}
+
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+// for in looop
+
+for (let i in band){
+    console.log(band[i]); // accesing keys
+    console.log(`${i} : ${band[i]}`); // accesing values and keys
+};
+
+// deleting properties in objects
+delete band.drums;
+
+// checking if a value exists
+console.log(band.hasOwnProperty('drums')); // gives a boolean
+
+// destructuring objects
+const {guitar:one} = band;
+const {bass:two, vocals:three} = band;
+console.log(one);
+console.log(two);
+console.log(three);
+
+function sings ({vocals}){return `${vocals} Sings so Well`};
+
+console.log(sings(band));
+
+// Classes
