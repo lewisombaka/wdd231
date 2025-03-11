@@ -188,3 +188,27 @@ console.log(toProperCase("dAvE"));
 console.log("lewis".slice(1));
 
 // scope
+// var, let and const
+// global scope
+
+var x = 1;
+let y = 2;
+// const z = 3;
+
+// local scope
+
+{
+    let y = 4;
+}
+// let z;
+function myFunction(){
+    console.log(y);
+}
+
+// console.log(z);
+myFunction()
+
+// avoid using global scopes
+// avoid using var, stick with const or let
+
+// Arrays
