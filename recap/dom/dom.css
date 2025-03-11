@@ -1,0 +1,23 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkcyan;
+    max-width: 520px;
+    margin: 0 auto;
+    border: 2px solid cyan;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+.list-items {
+    background-color: aliceblue;
+    width: 12rem;
+    list-style: none;
+    margin: .3rem;
+}
