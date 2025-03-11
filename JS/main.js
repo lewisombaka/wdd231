@@ -71,7 +71,33 @@ console.log(reply);
 
 // ternary operator
 
+console.log("Debug");
+
+let age = 21;
+let time = 7;
+
+let greeting = time <= 6 ? "Good Morning" : "Good Afternoon";
+
+console.log(greeting);
+
+let message = age>=18 ? "You are an adult" : "You're a minor";
+
+console.log(message);
+
+console.log("Debug");
+
+let student = true;
+
+let school = student ? "Welcome To School" : "Get Out";
+console.log(school);
+
+console.log("I Jah Man Levi");
+
+//
+
 let meat = "Beef";
+
+
 
 let response = soup ? "Yes it's beef":"No it's not";
 console.log(response);
@@ -87,11 +113,42 @@ console.log(response);
 //     console.log("You didn't enter your name");
 // }
 
-let playGame = confirm("Shall we play Rock, Paper, Scissor Game? ");
+// let playGame = confirm("Shall we play Rock, Paper, Scissor Game? ");
 
-if (playGame){
+// let computer;
+// let user;
+// let result;
+
+// if (playGame){
     //
+    // user = prompt("Choose between Rock, Paper or Scissor");
+    // if (user == "Rock"){
+    //     computer == "Scissor";
+    //     console.log(result);
+    // };
+// }
+// else{
+    // alert("Okay, Please Come Back Soon!");
+// }
+
+// while loops
+
+let myNumber = 50;
+
+while (myNumber < 50){
+    console.log(myNumber);
+    myNumber++;
 }
-else{
-    alert("Okay, Please Come Back Soon!");
+
+// do while
+
+do {
+    console.log(myNumber);
+}
+while(myNumber < 50);
+
+// for loop
+
+for (let i = 0; i < 10; i++){
+    console.log(i);
 }
