@@ -212,3 +212,70 @@ myFunction()
 // avoid using var, stick with const or let
 
 // Arrays
+const myArray = [];
+// add element to an array
+myArray[0] = "Lewis";
+myArray[1] = 1999;
+myArray[2] = "BYU-I";
+
+console.log(myArray);
+console.log(myArray.length); // length
+console.log(myArray[myArray.length-1]); // last item
+
+// add items
+myArray.push("School");
+console.log(myArray);
+
+// remove items
+myArray.pop();
+console.log(myArray);
+
+// last item
+
+const lastItem = myArray.pop();
+console.log(lastItem);
+
+// add item to the beginning of an array
+myArray.unshift(25);
+console.log(myArray);
+
+// remove from the first of the array
+
+myArray.shift();
+console.log(myArray);
+
+// delete in a specific index
+
+myArray.splice(1,1); // specify the start and the end
+myArray.splice(1,1,42); // specify the start and the end the replace
+
+// reverse
+myArray.reverse();
+
+// join
+myArray.join();
+console.log(myArray);
+
+// concat - joins two existing arrays
+
+const newArray = myArray.concat(myArray);
+
+// multidimensional arrays
+
+const equipShelfA = ["Baseball", "Football", "Volleyball"];
+const equipShelfB = ["Basketball", "Golf Balls", "Tennis Balls"];
+
+const clothesShelfA = ["Tank Tops", "T-Shirts", "Jerseys"];
+const clothesShelfB = ["Sweat Tops", "Sweat Pants", "Hoodies"];
+
+console.log(equipShelfA[1]);
+console.log(clothesShelfA[0]);
+
+const equipDept = [equipShelfA, equipShelfB];
+const clothesDept = [clothesShelfA, clothesShelfB];
+
+console.log(equipDept[0][1]);
+console.log(clothesDept[1][0]);
+
+const sportsStore = [equipDept,clothesDept];
+console.log(sportsStore[0][0][1]);
