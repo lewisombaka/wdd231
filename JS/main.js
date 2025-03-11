@@ -152,3 +152,39 @@ while(myNumber < 50);
 for (let i = 0; i < 10; i++){
     console.log(i);
 }
+
+// functions
+
+function sum(a,b){
+    if (b === undefined){
+        return a + a
+    }
+    return a + b;
+};
+
+console.log(sum(22,2));
+
+function getUserName(email){
+    return email.slice(0,email.indexOf("@"));
+}
+
+console.log(getUserName("lewisochieng99@gmail.com"));
+
+
+// anonymous / arrow function
+
+const minus = (num1,num2) => {
+    return num1 - num2;
+}
+
+console.log(minus(2,1));
+
+const toProperCase = (name)=>{
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+}
+
+console.log(toProperCase("dAvE"));
+
+console.log("lewis".slice(1));
+
+// scope
