@@ -69,7 +69,7 @@ let ull = document.querySelector('ul');
 console.log(ull.parentNode.parentNode); //
 console.log(ull.parentElement.parentElement); //
 
-// optin for nodes rather than elements
+// option for nodes rather than elements
 
 // transversing downwards
 console.log(ull.childNodes);
@@ -77,3 +77,48 @@ console.log(ull.childNodes);
 ull.childNodes[1].style.backgroundColor = 'blue';
 
 // Event Listeners
+// element.addEventListener("click",function);
+
+const buttonTwo = document.querySelector('#two');
+buttonTwo.addEventListener('click',() =>{
+    alert ('Good Boy');
+});
+
+// mouseHover
+const buttonThree = document.querySelector('#three');
+buttonThree.addEventListener('mouseover',()=>{
+    buttonThree.style.color = 'red';
+});
+
+buttonThree.addEventListener('mouseout',()=>{
+    buttonThree.style.color = '' // reset of color
+});
+
+// reveal more
+
+const revealBtn = document.querySelector('.reveal');
+const hiddenText = document.querySelector('.remove');
+revealBtn.addEventListener('click',()=>{
+    if (hiddenText.style.display === 'none'){
+        hiddenText.style.display = 'block';
+        revealBtn.textContent = 'Hide';
+    }
+    else {
+        hiddenText.style.display = 'none';
+        revealBtn.textContent = 'Reveal';
+    }
+});
+
+const hamburger = document.querySelector('.ham');
+const nav = document.querySelector('.nav');
+
+hamburger.addEventListener('click',()=>{
+    if (nav.style.display === 'none'){
+        nav.style.display = 'block';
+        hamburger.textContent = 'x';
+    }
+    else{
+        nav.style.display = 'none';
+        hamburger.textContent = '__';
+    }
+});

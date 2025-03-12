@@ -21,3 +21,9 @@ h1 {
     list-style: none;
     margin: .3rem;
 }
+
+.remove, .nav {
+    display: none;
+    /* opacity: 0; */
+    transition: opacity 1.5s ease-in-out;
+}
