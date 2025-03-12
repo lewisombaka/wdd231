@@ -57,3 +57,23 @@ const title2 = document.querySelector('#main-heading');
 
 li.classList.add('list-items');
 li.classList.remove('list-items');
+
+// Remove an element
+li.remove();
+
+// DOM tree
+// DOM Hierachy (parent node, child node, siblings)
+
+// parent node transversal
+let ull = document.querySelector('ul');
+console.log(ull.parentNode.parentNode); //
+console.log(ull.parentElement.parentElement); //
+
+// optin for nodes rather than elements
+
+// transversing downwards
+console.log(ull.childNodes);
+
+ull.childNodes[1].style.backgroundColor = 'blue';
+
+// Event Listeners
