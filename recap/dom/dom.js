@@ -122,3 +122,39 @@ hamburger.addEventListener('click',()=>{
         hamburger.textContent = '__';
     }
 });
+
+// Event Propagation
+// capturing, target, bubbling
+
+// Event delegation
+// allows users to append a single event listener to a parent element that adds it all of its present and future descendants that match a selector
+
+// const football = document.querySelector('#Football');football.addEventListener('click',()=>{
+//     football.style.color = football.style.color === 'red' ? 'black' : 'red';
+//     console.log('Football is clicked');
+// });
+
+const sports = document.querySelector('#sports')
+
+sports.addEventListener('click',function(e){
+    console.log(e.target.getAttribute('id')+' is clicked');
+    // e.target.style.color = e.target.style.color === 'red' ? 'black' : 'red';
+    const target = e.target;
+    target.style.color = target.style.color === 'red' ? 'black' : 'red';
+});
+
+
+
+const addSport = document.querySelector('#addSport');
+addSport.addEventListener('click',()=>{
+    const sport = prompt('Enter Sport');
+    if (sport === null){
+
+    }else
+    {
+    const sportItem = document.createElement('li');
+    sportItem.textContent = sport;
+    sports.appendChild(sportItem);
+    }
+});
+
