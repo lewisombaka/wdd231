@@ -1,0 +1,18 @@
+{
+    "familyName":"Ombaka",
+    "dateMoved":"2007-02-06",
+    "numberOfPeople":2,
+    "visited":true,
+    "familyMembers":[
+        {
+            "Name":"Lewis Ombaka",
+            "Gender":"male",
+            "birthDate":"1999-07-27"
+        },
+        {
+            "Name":"Rachael Ombaka",
+            "Gender":"Female",
+            "birthDate":"1997-02-27"
+        }
+    ]
+}
