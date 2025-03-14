@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example</title>
+</head>
+<body>
+    <p>Learning JSON in 10 minutes</p>
+    <script>
+
+        // assume it has been stringified and arrived as a string
+        let companies = `[
+            {
+                "Name":"Big Cooperation",
+                "numberOfEmployees":10000,
+                "ceo":"Mary",
+                "rating":3.6
+            },
+            {
+                "Name":"Small Startup",
+                "numberOfEmployees":3,
+                "ceo":null,
+                "rating":4.3
+            }
+        ]`
+
+        console.log(companies);
+        console.log(JSON.parse(companies)); // JSON has been parsed back to an object
+        console.log(JSON.parse(companies)[0].Name);
+    </script>
+</body>
+</html>

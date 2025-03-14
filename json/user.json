@@ -1,0 +1,11 @@
+{
+    "Name":"Lewis",
+    "County":"Nairobi",
+    "isProgrammer":true,
+    "favoriteNumber":7,
+    "hobbies":["Coding","Playing Chess","Reading Psychology Books"],
+    "friends":[
+        {"friend1":"Joy"},
+        {"friend2":"Ken"}
+    ]
+}
