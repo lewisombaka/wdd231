@@ -396,3 +396,26 @@ class pizza {
 
 const myPizza = new pizza("pepperoni");
 myPizza.bake();
+
+// try catch
+
+// DOM manipulation 
+
+// getElementById();
+// querySelector();
+// getElementByClassName();
+// getElementByTagName();
+// querySelectorAll(".divs");
+// const allDivs = document.querySelectorAll(".divs");
+
+// for(let i = 0; i < allDivs.length; i++){
+//     allDivs[i].style.backgroundColor = 'darkblue';
+// }
+
+// parentElement
+// children - navigating the DOM tree
+// childNodes
+// nextSibling
+// previousSibling
+
+// Event Listeners
