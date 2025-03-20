@@ -419,3 +419,18 @@ myPizza.bake();
 // previousSibling
 
 // Event Listeners
+
+// syntax: addEventListener(event,function, useCapture) 
+
+
+const h = document.querySelector(".h1");
+h.addEventListener("click", (e)=>{
+    console.log(e.target);
+    e.target.textContent = "Viewed";
+    view.style.backgroundColor = 'red';
+})
+
+// h.addEventListener("click", (e)=>{
+//     console.log(e.target);
+//     e.target.textContent = "Again";
+// })
